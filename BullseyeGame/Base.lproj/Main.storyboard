@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,118 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BullseyeGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dgj-eY-6jf">
+                                <rect key="frame" x="70" y="172.5" width="527" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.90000000000000002" green="0.13500000000000004" blue="0.19874999999999979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.90000000000000002" green="0.13500000000000004" blue="0.19874999999999979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.90000000000000002" green="0.13500000000000004" blue="0.19874999999999979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc6-rU-acg">
+                                <rect key="frame" x="20" y="172" width="47" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb7-aM-Z2N">
+                                <rect key="frame" x="600" y="172" width="47" height="31"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put the slider as close as you can to: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPt-vH-AQn">
+                                <rect key="frame" x="83.5" y="70" width="500" height="36.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="365" id="z2d-hV-dkt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                <color key="textColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-6G-gLY">
+                                <rect key="frame" x="20" y="318.5" width="99.5" height="36.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                <color key="textColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb0-jd-sNJ">
+                                <rect key="frame" x="537.5" y="318.5" width="109.5" height="36.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                <color key="textColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tff-si-agg">
+                                <rect key="frame" x="249.5" y="313" width="168" height="42"/>
+                                <color key="backgroundColor" red="0.20196963028169015" green="0.18142353181209009" blue="0.18313570668455678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="Zhr-lz-CBE"/>
+                                    <constraint firstAttribute="height" constant="42" id="wZ7-YV-Qzr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YGP-Z5-j0G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT9-uL-ALp">
+                                <rect key="frame" x="249.5" y="251" width="168" height="42"/>
+                                <color key="backgroundColor" red="0.20026408450704225" green="0.17972533671162094" blue="0.18143689902790608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="TBR-UG-5qy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="it1-iK-ELZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <state key="normal" title="Hit Me!">
+                                    <color key="titleColor" red="0.90000000000000002" green="0.81000000000000005" blue="0.8175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hitMePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Iw-R2-G3H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050000000000000003" green="0.0075000000000000015" blue="0.011041666666666656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sT9-uL-ALp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="11A-kt-MSs"/>
+                            <constraint firstItem="Zb0-jd-sNJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tff-si-agg" secondAttribute="trailing" constant="8" symbolic="YES" id="1xu-s4-xRr"/>
+                            <constraint firstItem="dgj-eY-6jf" firstAttribute="leading" secondItem="Vc6-rU-acg" secondAttribute="trailing" constant="5" id="2rf-Wf-0Ol"/>
+                            <constraint firstItem="Ef8-6G-gLY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="81I-pV-Xpe"/>
+                            <constraint firstItem="dgj-eY-6jf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BMZ-TS-I7H"/>
+                            <constraint firstItem="Tff-si-agg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ef8-6G-gLY" secondAttribute="trailing" constant="8" symbolic="YES" id="Bmi-bQ-h1g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ef8-6G-gLY" secondAttribute="bottom" constant="20" id="EBX-K0-vzy"/>
+                            <constraint firstItem="Sb7-aM-Z2N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IOb-ui-xeF"/>
+                            <constraint firstItem="Tff-si-agg" firstAttribute="top" secondItem="sT9-uL-ALp" secondAttribute="bottom" constant="20" id="ScX-S6-BNW"/>
+                            <constraint firstAttribute="trailing" secondItem="Sb7-aM-Z2N" secondAttribute="trailing" constant="20" id="WMW-Rq-6u2"/>
+                            <constraint firstItem="Tff-si-agg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c2h-Pa-5r3"/>
+                            <constraint firstItem="Sb7-aM-Z2N" firstAttribute="leading" secondItem="dgj-eY-6jf" secondAttribute="trailing" constant="5" id="fbO-dG-Xbs"/>
+                            <constraint firstItem="mPt-vH-AQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijh-JU-vM9"/>
+                            <constraint firstItem="mPt-vH-AQn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="lwm-BS-aes"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tff-si-agg" secondAttribute="bottom" constant="20" id="mN4-tF-8n4"/>
+                            <constraint firstItem="Vc6-rU-acg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nHw-Sc-sxM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zb0-jd-sNJ" secondAttribute="trailing" constant="20" id="nKd-e2-g2s"/>
+                            <constraint firstItem="Vc6-rU-acg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qa0-LY-wPB"/>
+                            <constraint firstItem="dgj-eY-6jf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s8F-cd-Qoo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zb0-jd-sNJ" secondAttribute="bottom" constant="20" id="yWh-oC-73v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="hitMeButton" destination="sT9-uL-ALp" id="AqS-NN-MZh"/>
+                        <outlet property="roundLabel" destination="Zb0-jd-sNJ" id="oI2-kl-Egv"/>
+                        <outlet property="scoreLabel" destination="Ef8-6G-gLY" id="x76-Zf-aTf"/>
+                        <outlet property="slider" destination="dgj-eY-6jf" id="ZUw-V4-55c"/>
+                        <outlet property="startOverButton" destination="Tff-si-agg" id="KUM-6q-gz4"/>
+                        <outlet property="targetLabel" destination="mPt-vH-AQn" id="TCD-nY-NaM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.98050974512745" y="136.80000000000001"/>
         </scene>
     </scenes>
 </document>
